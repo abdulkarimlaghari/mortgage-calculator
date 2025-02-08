@@ -17,11 +17,9 @@ public class MortgageCalculator {
         float monthlyInterest = getMonthlyInterest();
         float numberOfPayments = getNumberOfPayments();
 
-        double balance = principal
+        return principal
                 * (Math.pow(1 + monthlyInterest, numberOfPayments) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
                 / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
-
-        return balance;
     }
     public double calculateMortgage() {
         float monthlyInterest = getMonthlyInterest();
